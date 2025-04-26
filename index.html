@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Greeshma Chandra Shekar</title>
+  <link rel="icon" type="image/png" href="favicon.png">  
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Greeshma Chandra Shekar | Data Analyst</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body { font-family: 'Inter', sans-serif; margin: 0; background: #f4f4f4; color: #333; }
+    nav { background: #111; padding: 1rem 2rem; display: flex; justify-content: space-between; align-items: center; }
+    .nav-name { color: #fff; font-weight: bold; font-size: 1.2rem; }
+    nav a { color: #fff; margin-left: 1.5rem; text-decoration: none; font-weight: bold; }
+    nav a:hover { color: #00bcd4; }
+    .scroll-indicator { position: absolute; bottom: 10px; left: 50%; transform: translateX(-50%); font-size: 24px; color: #fff; cursor: pointer; opacity: 0; transition: opacity 0.5s ease; }
+    .scroll-indicator.active { opacity: 1; }
+    header { background: #111; color: #fff; padding: 4rem 2rem; text-align: center; }
+    .typing { font-size: 2rem; color: #ccc; height: 2rem; }
+    .name-typing { font-size: 2.5rem; font-weight: bold; margin-bottom: 1rem; }
+    @keyframes typing { from { width: 0; } to { width: 100%; } }
+    @keyframes blink { 50% { border-color: transparent; } }
+    section { padding: 4rem 2rem; max-width: 1200px; margin: 0 auto; }
+    h2 { font-size: 2rem; margin-bottom: 1rem; color: #444; }
+    .experience-grid, .project-grid, .skillset-grid { display: flex; flex-wrap: wrap; gap: 1.5rem; justify-content: space-between; }
+    .experience, .project, .skillset { flex: 1 1 48%; background: #fff; border-radius: 10px; padding: 1.5rem; box-shadow: 0 4px 12px rgba(0,0,0,0.1); transition: transform 0.3s ease, box-shadow 0.3s ease; position: relative; overflow: hidden; }
+    .experience:hover, .project:hover, .skillset:hover { transform: scale(1.05); box-shadow: 0 8px 20px rgba(0,0,0,0.15); }
+    footer { background: #111; color: #fff; text-align: center; padding: 2rem; }
+    .accordion { background-color: #e0e0e0; border: none; outline: none; padding: 1rem; width: 100%; text-align: left; font-size: 1rem; cursor: pointer; transition: background-color 0.3s ease; margin-bottom: 0.5rem; border-radius: 6px; display: flex; justify-content: space-between; align-items: center; }
+    .accordion:hover { background-color: #d0d0d0; }
+    .accordion::after { content: '\25BC'; font-size: 0.8rem; }
+    .panel { padding: 0 1rem 1rem; background-color: #f9f9f9; display: none; overflow: hidden; }
+    .experience h3 { font-size: 1.1rem; color: #222; margin-bottom: 0.5rem; }
+    .experience ul { padding-left: 1.2rem; }
+    .experience ul li { margin-bottom: 0.5rem; }
+    .contact-info {display: flex; gap: 15rem; justify-content:center; font-size: 1rem;}
+
+.contact-info div {
+  line-height: 1.5;
+}
+
+  </style>
+</head>
+<script>
+  // Typing animation for title
+  const titles = ["Data Analyst", "Python Developer", "BI Specialist"];
+  let titleIndex = 0, charIndex = 0;
+
+  function typeTitle() {
+    const titleEl = document.getElementById("typing");
+    if (titleIndex >= titles.length) titleIndex = 0;
+    const currentTitle = titles[titleIndex];
+    titleEl.textContent = currentTitle.slice(0, ++charIndex);
+
+    if (charIndex === currentTitle.length) {
+      setTimeout(() => {
+        charIndex = 0;
+        titleIndex++;
+        typeTitle();
+      }, 1500);
+    } else {
+      setTimeout(typeTitle, 100);
+    }
+  }
+
+  // Typing animation for name
+  const nameText = "Greeshma Chandra Shekar";
+  let nameCharIndex = 0;
+
+  function typeName() {
+    const nameEl = document.getElementById("nameTyping");
+    nameEl.textContent = nameText.slice(0, ++nameCharIndex);
+
+    if (nameCharIndex < nameText.length) {
+      setTimeout(typeName, 100);
+    }
+  }
+
+  document.addEventListener("DOMContentLoaded", function () {
+    typeTitle();
+    typeName();
+    
+    const acc = document.getElementsByClassName("accordion");
+    for (let i = 0; i < acc.length; i++) {
+      acc[i].addEventListener("click", function () {
+        this.classList.toggle("active");
+        const panel = this.nextElementSibling;
+        panel.style.display = panel.style.display === "block" ? "none" : "block";
+      });
+    }
+  });
+</script>
+
+<body>
+  <nav id="navbar">
+    <div class="nav-name">Greeshma Chandra Shekar</div>
+    <div>
+      <a href="#about">About</a>
+      <a href="#experience">Experience</a>
+      <a href="#projects">Projects</a>
+      <a href="#skills">Skillset</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <div class="scroll-indicator" id="scrollIndicator">&#x2193;</div>
+  </nav>
+
+  <header>
+    <div class="name-typing" id="nameTyping"></div>
+    <div class="typing" id="typing"></div>
+  </header>  
+
+  <section id="about">
+    <h2>About Me</h2>
+    <p>Hi, I’m Greeshma Chandra Shekar, a results-driven data analyst with a master's degree in computer science from Clemson University and professional experience in both U.S. and international markets. I bring a strong foundation in data-driven decision-making, financial analytics, and reporting automation.</br></br>I specialize in SQL, Python, Power BI, Tableau, and Excel, with a proven track record of optimizing data pipelines, building predictive models, and delivering actionable insights that drive business performance. I’ve worked on diverse datasets in the financial, operational, and compliance domains—turning raw data into strategic value.</br></br>I’m passionate about leveraging data to solve real-world problems, and I’m actively seeking full-time opportunities where I can contribute to meaningful, impact-driven work through analytics, visualization, and cross-functional collaboration.</p>
+  </section>
+
+  <section id="experience">
+    <h2>Experience</h2>
+    <div class="experience-grid">
+      <div class="experience">
+        <h3>Ameriprise Financial</br>Data Analyst</h3>Charlotte, NC</br>Feb 2024 – Present
+        <ul>
+          <li>Optimized financial data processes by automating reporting workflows, reducing manual effort by 40%, and improving data accuracy for investment insights.</li>
+          <li>Developed predictive models using SQL, Python, and Power BI to assess market trends and client portfolio performance, enabling data-driven decision-making.</li>
+          <li>Enhanced data integration & ETL Pipelines, ensuring real-time availability of structured and unstructured financial data, improving operational efficiency.</li>
+          <li>Built automated dashboards to monitor regulatory compliance and risk exposure, enabling teams to identify potential issues 20% faster.</li>
+          <li>Analysed customer investment behaviours, helping develop personalized financial strategies, increasing client retention by 15%.</li>            
+          <li>Led cross-functional Collaboration, working with finance, IT, and business teams to transform complex financial data into actionable insights, supporting key initiatives. </li>
+        </ul>
+      </div>
+      <div class="experience">
+        <h3>GCS Techno Solutions</br>Data Analyst</h3>Bangalore, India</br>Jan 2021 – June 2022</h3>
+        <ul>
+          <li>Led advanced data analysis projects, achieving a 20% reduction in operational costs by developing automated data pipelines and reports using Python and SQL.</li>
+          <li>Designed and implemented dynamic Tableau dashboards to track KPIs, driving a 25% improvement in cross-departmental decision-making.</li>
+          <li>Enhanced predictive modeling accuracy by 18% through comprehensive data cleaning and feature engineering, supporting targeted marketing strategies.</li>
+          <li>Optimized ETL workflows, reducing processing time by 30% while maintaining a data integrity rate of 99.9%.</li>
+          <li>Collaborated with a 10-member team to execute a large-scale customer segmentation project, influencing a 12% increase in customer retention.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="project-grid">
+      <div class="project">
+        <h3>International Institute of Information Technology, Bangalore (IIITB)</h3></br>Summer Research Intern</br>Bangalore,India</br>Jun 2023 - Aug 2023</h3>
+        <ul>
+          <li>Spearheaded comprehensive data analysis and visualization initiatives, delivering actionable insights to Karnataka's state government officials and successfully boosting revenue by 15% through strategically implemented investment strategies.</li>
+          <li>Developed the WordPress plugin MailPoet for automated email notifications and content creation, alongside comprehensive knowledge-transfer documentation aimed at supporting Sustainable Development Goals (SDGs) 1, 2, 3, 4, and beyond.</li>
+          <li>Executed impactful insights, improving predictive model accuracy by 15% through correlation and predictive impact analysis.</li>
+          <li>Engineered Tableau dashboards for budget allocation, resulting in a 20% cost-effectiveness increase for regional development.</li>
+          <li>Collaborated with a team of 7 skilled professionals on the Karnataka Data Lake Project, striving for 99.97% accuracy.</li>
+        </ul>
+      </div>
+      <div class="project">
+        <h3>Whack a Mole Game</h3>
+        <p>Fun arcade reflex game. Hit the moles as they pop up to score points.</p>
+        <a href="https://girishraja1508.github.io/whack_a_mole-project/" target="_blank">Click to play!</a>
+      </div>
+      <div class="project">
+        <h3>Open-Source Contributions</h3>
+        <p>A developer's participation in collaborative projects on GitHub, where the codebase is publicly available for anyone to view, use, and contribute to.</p>
+        <ul>
+          <li><a href="https://github.com/Greeshma-C20084146/frontend/commit/202dafd49ae4c2bd89d60ee12565ac52de45aa4f" target="_blank">Commit 1</a></li>
+          <li><a href="https://github.com/Greeshma-C20084146/frontend/commit/17254519391ae83931056922d6f7af668e3f8695" target="_blank">Commit 2</a></li>
+          <li><a href="https://github.com/Greeshma-C20084146/frontend/commit/9e89441cd7ca0fa889f49bb0163616212cde97f0" target="_blank">Commit 3</a></li>
+          <li><a href="https://github.com/Greeshma-C20084146/SorcererCoderNet/pull/1" target="_blank">Pull Request</a></li>
+        </ul>
+      </div>
+      <div class="project">
+        <h3>Diabetic retinopathy detection using CNN, ResNet152V2, and VGG 16</h3>
+        <ul>
+          <li>Performed data preprocessing and augmentation on color fundus images using Python and PyTorch.</li>
+          <li>Implemented transfer learning on CNN models like VGG-16 and ResNet to detect diabetic retinopathy severity and compared model accuracy.</li>
+          <li>Developed a web application with a REST API for user interaction with the trained model.</li>
+        </ul>
+      </div>
+      <div class="project">
+        <h3>Birds Audio Detection using Convolutional Neural Network and Transfer Learning</h3>
+        <ul>
+          <li>Bird audio detection identifies whether bird sounds are present in a recording, as many birds are best detected by their sounds.</li>
+          <li>By converting audio into spectrograms, visual representations of signal strength over time, a CNN model with Transfer Learning can be trained for detection.</li>
+          <li>My paper demonstrates the use of CNN and Transfer Learning to detect bird sounds in audio recordings.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="skills">
+    <h2>Skillset</h2>
+    <button class="accordion">Programming & Scripting</button>
+    <div class="panel">
+      <p>
+        <li>Python (Pandas, NumPy)</li>
+        <li>SQL</li>
+        <li>JavaScript</li>
+        <li>HTML5</li>
+        <li>CSS</li>
+        <li>React (Basic proficiency)</li>
+      </p>
+    </div>
+
+    <button class="accordion">Data Analysis & Engineering</button>
+    <div class="panel">
+      <p>
+        <li>Data Wrangling</li>
+        <li>ETL Processes</li>
+        <li>Correlation Analysis</li>
+        <li>Predictive Modeling</li>
+        <li>Statistical Analysis</li>
+        <li>Data Cleaning</li>
+        <li>Data Processing</li>
+        <li>Snowflake</li>
+        <li>Compliance & Risk Analytics</li>
+        <li>REST APIs</li>
+        <li>Database Management (SQL, AWS)</li>
+        <li>Financial Data Analysis</li></p>
+    </div>
+
+    <button class="accordion">Data Visualization & Reporting</button>
+    <div class="panel">
+      <p>
+        <li>Tableau</li>
+        <li>Power BI</li>
+        <li>Dashboards</li>
+        <li>Data Storytelling</li>
+        <li>Microsoft Excel (Pivot Tables, VLOOKUP, Macros)</li>
+        <li>Jupyter Notebook</li>
+        <li>Google Colab</li>
+      </p>
+    </div>
+
+    <button class="accordion">Business & Analytical Skills</button>
+    <div class="panel">
+      <p>
+        <li>Strategic Planning</li>
+        <li>KPI Analysis</li>
+        <li>Financial & Investment Data Analysis</li>
+        <li>Business Intelligence</li>
+        <li>Data Driven Decision Making</li>
+        <li>Reporting Automation</li>
+      </p>
+    </div>
+
+    <button class="accordion">Soft Skills</button>
+    <div class="panel">
+      <p>
+        <li>Strong Communication</li>
+        <li>Stakeholder Management</li>
+        <li>Problem-Solving</li>
+        <li>Critical Thinking</li>
+        <li>Project Management</li>
+        <li>Cross-Functional Collaboration</li>
+        <li>Attention to Detail</li>
+        <li>Time Management</li>
+        <li>Growth Mindset</li>
+      </p>
+    </div>
+  </section>
+
+  <footer id="contact">
+    <h1>I'm available for work.</br>Feel free to get in touch!</h1>
+    </br>
+    <div>
+      <div style="text-align: center;">
+        <a href="https://www.linkedin.com/in/greeshma-c-shekar/" target="_blank" style="color: #00bcd4; margin: 0 1rem; text-decoration: none; display: inline-flex; align-items: center; justify-content: center;">
+          <i class="fab fa-linkedin" style="font-size: 1.5rem;"></i>
+        </a>
+        <a href="https://drive.google.com/file/d/1rCVaNSrzR-HhEq_4CL_he3HSu5lHxQlr/view?usp=drive_link" target="_blank" style="color: #00bcd4; margin: 0 1rem; text-decoration: none; display: inline-flex; align-items: center; justify-content: center;">
+          <i class="fas fa-file-alt" style="font-size: 1.5rem;"></i>
+        </a>
+        <a href="https://github.com/Greeshma-C20084146" target="_blank" style="color: #00bcd4; margin: 0 1rem; text-decoration: none; display: inline-flex; align-items: center; justify-content: center;">
+          <i class="fab fa-github" style="font-size: 1.5rem;"></i>
+        </a>
+      </div>
+      
+    </div>
+    </br>
+    <div class="contact-info">
+      <div>
+        <strong>Get in touch</strong><br>
+        greeshmacshekar31@gmail.com
+      </div>
+      <div>
+        <strong>Say hello</strong><br>
+        +1 864-765-4959
+      </div>
+    </div>          
+    </br>
+    </br>
+    <p>&copy; 2025 Greeshma Chandra Shekar</p>
+  </footer>
+</body>
+</html>
