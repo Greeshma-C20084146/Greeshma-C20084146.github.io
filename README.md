@@ -1,2 +1,2 @@
-# GreeshmaChandraShekar.com
-Visit my [Portfolio and feel free to contact me ()]
+# My personal website
+Visit my [Portfolio](https://greeshma-c20084146.github.io/) and feel free to contact me!
