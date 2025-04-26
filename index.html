@@ -40,25 +40,58 @@
     .experience ul li { margin-bottom: 0.5rem; }
     .contact-info {display: flex; gap: 15rem; justify-content:center; font-size: 1rem;}
     @media (max-width: 768px) {
-  nav { flex-direction: column; align-items: flex-start; }
-  .contact-info { flex-direction: column; gap: 2rem; }
-  .experience, .project, .skillset { flex: 1 1 100%; }
-  .experience-grid, .project-grid, .skillset-grid { gap: 1rem; }
+  nav { 
+    flex-direction: column; 
+    align-items: center; /* center the nav content */
+    text-align: center; 
+  }
+  nav div:nth-child(2) { 
+    margin-top: 1rem; 
+    display: flex; 
+    flex-direction: column; 
+    gap: 1rem; /* space between nav links vertically */
+  }
+  .contact-info { 
+    flex-direction: column; 
+    gap: 1.5rem; /* smaller gap for mobile */
+    align-items: center; /* center contact info */
+    text-align: center;
+  }
+  .experience, .project, .skillset { 
+    flex: 1 1 100%; 
+  }
+  .experience-grid, .project-grid, .skillset-grid { 
+    gap: 1rem; 
+  }
 }
 
 @media (max-width: 480px) {
-  header { padding: 2rem 1rem; }
-  section { padding: 2rem 1rem; }
-  h2 { font-size: 1.5rem; }
-  .name-typing { font-size: 2rem; }
-  .typing { font-size: 1.5rem; }
-  nav a { margin-left: 1rem; font-size: 0.9rem; }
+  header { 
+    padding: 2rem 1rem; 
+  }
+  section { 
+    padding: 2rem 1rem; 
+  }
+  h2 { 
+    font-size: 1.5rem; 
+  }
+  .name-typing { 
+    font-size: 2rem; 
+  }
+  .typing { 
+    font-size: 1.5rem; 
+  }
+  nav a { 
+    margin-left: 0; 
+    font-size: 1rem; 
+  }
+  .contact-info {
+    gap: 1rem;
+    font-size: 0.9rem;
+  }
 }
 
 
-.contact-info div {
-  line-height: 1.5;
-}
 
   </style>
 </head>
@@ -179,6 +212,16 @@
         <h3>Whack a Mole Game</h3>
         <p>Fun arcade reflex game. Hit the moles as they pop up to score points.</p>
         <a href="https://girishraja1508.github.io/whack_a_mole-project/" target="_blank">Click to play!</a>
+        <h4>Technologies Used</h4>
+        <p>
+          <ul>
+            <li>HTML: The whack-a-Mole game can be played online using HTML, which improves the entire gameplay experience.</li>
+            <br>
+            <li>CSS: Using CSS (Cascading Style Sheets), the whack-a-mole game can be styled and made more appealing graphically. It is in charge of deciding how the game will look, including how game objects like moles, backgrounds, and buttons will be made. The game will be more aesthetically pleasing and user-friendly for players as a result of CSS's responsive design, which makes sure that it adjusts to different screen sizes and devices.</li>
+            <br>
+            <li>JavaScript: It is the foundation of the whack-a-mole game, offering functionality and interactivity.</li>
+          </ul>
+        </p>
       </div>
       <div class="project">
         <h3>Open-Source Contributions</h3>
